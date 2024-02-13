@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geometry-Genius</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header></header>
+
+    <div class="md:flex gap-4 mt-5 md:mt-10">
+      <div class="md:flex-1 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card bg-red-300 shadow-xl">
+          <figure>
+            <img src="images/triangle.png" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Triangle</h2>
+            <p>Area = .5 x b x h</p>
+           <div class="flex gap-6">
+            <input id="tri-cm-input" placeholder="h" class="w-20 px-2" type="text"> <span>cm</span>
+            <input id="tri-cm-input-2" placeholder="b" class="w-20 px-2" type="text"> <span>cm</span>
+           </div>
+           <button id="tri-btn" class="btn btn-outline btn-secondary mt-5">Calculate</button>
+          </div>
+        </div>
+
+
+
+        <div class="card bg-red-300 shadow-xl">
+          <figure>
+            <img src="images/rectangle.png" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Rectangle</h2>
+            <p>Area =  w x L</p>
+           <div class="flex gap-6">
+            <input id="rec-input-1" placeholder="w" class="w-20 px-2" type="text"> <span>cm</span>
+            <input id="rec-input-2" placeholder="L" class="w-20 px-2" type="text"> <span>cm</span>
+           </div>
+           <button id="rec-btn" class="btn btn-outline btn-secondary mt-5">Calculate</button>
+          </div>
+        </div>
+
+
+
+        <div class="card bg-red-300 shadow-xl">
+          <figure>
+            <img src="images/parallelogram.png" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">parallelogram</h2>
+            <p>Area =  b x h</p>
+           <!-- <div class="flex gap-6">
+            <input placeholder="w" class="w-20 px-2" type="text"> <span>cm</span>
+            <input placeholder="L" class="w-20 px-2" type="text"> <span>cm</span>
+           </div> -->
+           <div class="flex">
+            <p id="para-text">b = 10 cm</p> <p id="para-text-2">h = 12cm</p>
+           </div>
+           <button id="para-btn" class="btn btn-outline btn-secondary mt-5">Calculate</button>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-[300px] border p-5">
+        <p class="text-3xl font-semibold">Calculation</p> 
+        <p>Triangle area : <span id="result-place-tri"></span></p>
+        <p>Rectangle area : <span id="result-place-rec"></span></p>
+        <p>Parallelogram area : <span id="result-place-para"></span></p>
+      </div>
+    </div>
+    <script src="utlity.js"></script>
+    <script src="geometry.js"></script>
+  </body>
+</html>
